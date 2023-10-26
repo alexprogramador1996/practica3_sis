@@ -81,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
       edadController.clear();
       telefonoController.clear();
 
-      _showSnackbar('Test agregado correctamente');
+      _showSnackbar('Registros guardados correctamente');
     } else {
       _showSnackbar('Por favor, completa todos los campos');
     }
@@ -133,7 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
               controller: idController,
               decoration: InputDecoration(
                 labelText: 'ID',
-                icon: Icon(Icons.confirmation_number),
+                icon: Image.asset('images/carne-de-identidad.png', width: 24, height: 24),
               ),
             ),
             SizedBox(height: 8.0),
@@ -141,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
               controller: nombreController,
               decoration: InputDecoration(
                 labelText: 'Nombre',
-                icon: Icon(Icons.person),
+                icon: Image.asset('images/cara-feliz.png', width: 24, height: 24),
               ),
             ),
             SizedBox(height: 8.0),
@@ -149,7 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
               controller: edadController,
               decoration: InputDecoration(
                 labelText: 'Edad',
-                icon: Icon(Icons.cake),
+                icon: Image.asset('images/feliz-cumpleanos.png', width: 24, height: 24),
               ),
             ),
             SizedBox(height: 8.0),
@@ -157,7 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
               controller: telefonoController,
               decoration: InputDecoration(
                 labelText: 'Teléfono',
-                icon: Icon(Icons.phone),
+                icon: Image.asset('images/telefono-fijo.png', width: 24, height: 24),
               ),
             ),
             SizedBox(height: 4.0),
