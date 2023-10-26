@@ -124,122 +124,132 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.primary,
         title: Text(
           widget.title,
-          style: TextStyle(color: Colors.white), // Cambiar el color del texto a blanco
+          style: TextStyle(color: Colors.white),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(12.0),
+      body: SafeArea(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            TextFormField(
-              controller: idController,
-              decoration: InputDecoration(
-                labelText: 'ID',
-                labelStyle: TextStyle(color: Theme.of(context).colorScheme.primary), 
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.grey), 
-                ),
-                icon: Image.asset('images/carne-de-identidad.png', width: 24, height: 24),
-              ),
-            ),
-            SizedBox(height: 2.0),
-            TextFormField(
-              controller: nombreController,
-              decoration: InputDecoration(
-                labelText: 'Nombre',
-                labelStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.grey),
-                ),
-                icon: Image.asset('images/cara-feliz.png', width: 24, height: 24),
-              ),
-            ),
-            SizedBox(height: 1.0),
-            TextFormField(
-              controller: edadController,
-              decoration: InputDecoration(
-                labelText: 'Edad',
-                labelStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.grey),
-                ),
-                icon: Image.asset('images/feliz-cumpleanos.png', width: 24, height: 24),
-              ),
-            ),
-            SizedBox(height: 2.0),
-            TextFormField(
-              controller: telefonoController,
-              decoration: InputDecoration(
-                labelText: 'Teléfono',
-                labelStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.grey),
-                ),
-                icon: Image.asset('images/telefono-fijo.png', width: 24, height: 24),
-              ),
-            ),
-            SizedBox(height: 2.0),
-            ElevatedButton(
-              onPressed: () {
-                addTest();
-              },
-              style: ElevatedButton.styleFrom(
-                primary: Colors.purple,
-              ),
-              child: Container(
-                alignment: Alignment.center,
-                constraints: BoxConstraints(minWidth: 1, maxWidth: double.infinity),
-                padding: EdgeInsets.symmetric(vertical: 8),
-                child: Text(
-                  'Agregar',
-                  style: TextStyle(
-                    color: Colors.white,
+            Flexible(
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      TextFormField(
+                        controller: idController,
+                        decoration: InputDecoration(
+                          labelText: 'ID',
+                          labelStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(color: Colors.grey),
+                          ),
+                          icon: Image.asset('images/carne-de-identidad.png', width: 24, height: 24),
+                        ),
+                      ),
+                      SizedBox(height: 2.0),
+                      TextFormField(
+                        controller: nombreController,
+                        decoration: InputDecoration(
+                          labelText: 'Nombre',
+                          labelStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(color: Colors.grey),
+                          ),
+                          icon: Image.asset('images/cara-feliz.png', width: 24, height: 24),
+                        ),
+                      ),
+                      SizedBox(height: 1.0),
+                      TextFormField(
+                        controller: edadController,
+                        decoration: InputDecoration(
+                          labelText: 'Edad',
+                          labelStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(color: Colors.grey),
+                          ),
+                          icon: Image.asset('images/feliz-cumpleanos.png', width: 24, height: 24),
+                        ),
+                      ),
+                      SizedBox(height: 2.0),
+                      TextFormField(
+                        controller: telefonoController,
+                        decoration: InputDecoration(
+                          labelText: 'Teléfono',
+                          labelStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(color: Colors.grey),
+                          ),
+                          icon: Image.asset('images/telefono-fijo.png', width: 24, height: 24),
+                        ),
+                      ),
+                      SizedBox(height: 2.0),
+                      ElevatedButton(
+                        onPressed: () {
+                          addTest();
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.purple,
+                        ),
+                        child: Container(
+                          alignment: Alignment.center,
+                          constraints: BoxConstraints(minWidth: 1, maxWidth: double.infinity),
+                          padding: EdgeInsets.symmetric(vertical: 4),
+                          child: Text(
+                            'Agregar',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 2.0),
+                      ElevatedButton(
+                        onPressed: () {
+                          reloadTests();
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.green,
+                        ),
+                        child: Container(
+                          alignment: Alignment.center,
+                          constraints: BoxConstraints(minWidth: 1, maxWidth: double.infinity),
+                          padding: EdgeInsets.symmetric(vertical: 4),
+                          child: Text(
+                            'Recargar',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 6.0),
+                    ],
                   ),
                 ),
               ),
             ),
-            SizedBox(height: 2.0),
-            ElevatedButton(
-              onPressed: () {
-                reloadTests();
-              },
-              style: ElevatedButton.styleFrom(
-                primary: Colors.green,
-              ),
-              child: Container(
-                alignment: Alignment.center,
-                constraints: BoxConstraints(minWidth: 1, maxWidth: double.infinity),
-                padding: EdgeInsets.symmetric(vertical: 8),
-                child: Text(
-                  'Recargar',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: 6.0),
             Expanded(
               child: FutureBuilder<List<Test>>(
                 future: getTests(),
@@ -280,3 +290,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
