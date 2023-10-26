@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
       title: 'EVALUACION 3',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.green,
         ),
       ),
       home: const MyHomePage(title: 'EVALUACION 3'),
@@ -122,10 +122,13 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
-        title: Text(widget.title),
+        title: Text(
+          widget.title,
+          style: TextStyle(color: Colors.white), // Cambiar el color del texto a blanco
+        ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(12.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -133,62 +136,109 @@ class _MyHomePageState extends State<MyHomePage> {
               controller: idController,
               decoration: InputDecoration(
                 labelText: 'ID',
+                labelStyle: TextStyle(color: Theme.of(context).colorScheme.primary), 
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.grey), 
+                ),
                 icon: Image.asset('images/carne-de-identidad.png', width: 24, height: 24),
               ),
             ),
-            SizedBox(height: 8.0),
+            SizedBox(height: 2.0),
             TextFormField(
               controller: nombreController,
               decoration: InputDecoration(
                 labelText: 'Nombre',
+                labelStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.grey),
+                ),
                 icon: Image.asset('images/cara-feliz.png', width: 24, height: 24),
               ),
             ),
-            SizedBox(height: 8.0),
+            SizedBox(height: 1.0),
             TextFormField(
               controller: edadController,
               decoration: InputDecoration(
                 labelText: 'Edad',
+                labelStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.grey),
+                ),
                 icon: Image.asset('images/feliz-cumpleanos.png', width: 24, height: 24),
               ),
             ),
-            SizedBox(height: 8.0),
+            SizedBox(height: 2.0),
             TextFormField(
               controller: telefonoController,
               decoration: InputDecoration(
                 labelText: 'Teléfono',
+                labelStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.grey),
+                ),
                 icon: Image.asset('images/telefono-fijo.png', width: 24, height: 24),
               ),
             ),
-            SizedBox(height: 4.0),
+            SizedBox(height: 2.0),
             ElevatedButton(
               onPressed: () {
                 addTest();
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.red,
+                primary: Colors.purple,
               ),
               child: Container(
                 alignment: Alignment.center,
                 constraints: BoxConstraints(minWidth: 1, maxWidth: double.infinity),
                 padding: EdgeInsets.symmetric(vertical: 8),
-                child: Text('Agregar'),
+                child: Text(
+                  'Agregar',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
               ),
             ),
-            SizedBox(height: 6.0),
-
+            SizedBox(height: 2.0),
             ElevatedButton(
               onPressed: () {
                 reloadTests();
               },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.green,
+              ),
               child: Container(
                 alignment: Alignment.center,
                 constraints: BoxConstraints(minWidth: 1, maxWidth: double.infinity),
                 padding: EdgeInsets.symmetric(vertical: 8),
-                child: Text('Recargar'),
+                child: Text(
+                  'Recargar',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
               ),
             ),
-
             SizedBox(height: 6.0),
             Expanded(
               child: FutureBuilder<List<Test>>(
