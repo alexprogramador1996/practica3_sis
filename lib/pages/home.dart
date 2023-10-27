@@ -150,7 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       icon: Image.asset('images/carne-de-identidad.png', width: 24, height: 24),
                     ),
                   ),
-                  SizedBox(height: 2.0),
+                  SizedBox(height: 8.0),
                   TextFormField(
                     controller: nombreController,
                     decoration: InputDecoration(
@@ -167,7 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       icon: Image.asset('images/cara-feliz.png', width: 24, height: 24),
                     ),
                   ),
-                  SizedBox(height: 1.0),
+                  SizedBox(height: 8.0),
                   TextFormField(
                     controller: edadController,
                     decoration: InputDecoration(
@@ -184,7 +184,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       icon: Image.asset('images/feliz-cumpleanos.png', width: 24, height: 24),
                     ),
                   ),
-                  SizedBox(height: 2.0),
+                  SizedBox(height: 8.0),
                   TextFormField(
                     controller: telefonoController,
                     decoration: InputDecoration(
@@ -201,7 +201,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       icon: Image.asset('images/telefono-fijo.png', width: 24, height: 24),
                     ),
                   ),
-                  SizedBox(height: 2.0),
+                  SizedBox(height: 8.0),
                   ElevatedButton(
                     onPressed: () {
                       addTest();
